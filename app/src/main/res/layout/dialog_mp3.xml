@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingHorizontal="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/colorPrimarySecondary"
+        android:elevation="0dp"
+        app:cardCornerRadius="5dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/titleAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@android:color/white"
+                android:text="Iri Bilang Bos Original.mp3"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <ImageButton
+                    android:id="@+id/buttonAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_play"
+                    android:background="@android:color/transparent"/>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progress="0"/>
+
+                <TextView
+                    android:id="@+id/currentDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

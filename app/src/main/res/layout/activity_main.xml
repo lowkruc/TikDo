@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/containerWrapper"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/appBarWrapper"
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="29dp"
+                    android:layout_height="?attr/actionBarSize">
+                    <ImageView
+                        android:id="@+id/logoApp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toRightOf="@id/logoApp"
+                        android:layout_toEndOf="@id/logoApp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_logo"
+                        android:contentDescription="@string/logo_apps" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        style="@style/CustomTabLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_toLeftOf="@id/logoApp"
+                        android:layout_toStartOf="@id/logoApp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        app:tabGravity="center"
+                        app:tabRippleColor="@android:color/transparent"
+                        app:tabIndicatorColor="@color/secondaryBlue"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabIndicatorGravity="bottom"
+                        app:tabMode="fixed"
+                        app:tabPaddingEnd="7dp"
+                        app:tabPaddingStart="7dp"
+                        app:tabSelectedTextColor="@android:color/white"
+                        app:tabTextColor="@android:color/darker_gray">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/tabDownload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/download" />
+
+                        <com.google.android.material.tabs.TabItem
+                            android:id="@+id/tabGalery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_galery" />
+
+                        <!--                    <com.google.android.material.tabs.TabItem-->
+                        <!--                        android:id="@+id/tabSettings"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:text="@string/settings" />-->
+
+                    </com.google.android.material.tabs.TabLayout>
+                </RelativeLayout>
+
+
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagger"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/banner"
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="ca-app-pub-5977365730645902/5089742242">
+                </com.google.android.gms.ads.AdView>
+            </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

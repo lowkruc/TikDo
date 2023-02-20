@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fregment.Download">
+
+    <!--Header Info-->
+    <RelativeLayout
+        android:id="@+id/wrapperTop"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/titleHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/_1_"
+            android:layout_marginBottom="-15dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/secondaryBlue"
+            android:textSize="60sp"
+            android:includeFontPadding="false"
+             />
+        <View
+            android:id="@+id/devider1"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/titleHeading"
+            android:layout_toEndOf="@id/titleHeading" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/devider1"
+            android:layout_toRightOf="@id/devider1">
+
+            <TextView
+                android:id="@+id/titleAppsHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/the_best_apps"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/titleAppsDownloadHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Video Downloader"
+                android:includeFontPadding="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/infoApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/wrapperTop"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/infoTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_reguler"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:text="Download any video without watermark"/>
+
+        <TextView
+            android:id="@+id/infoBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:includeFontPadding="false"
+            android:text="@string/free_and_unlimited"/>
+
+    </LinearLayout>
+
+    <!--Text Field URL-->
+    <RelativeLayout
+        android:id="@+id/textFieldWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="35dp"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@id/infoApps">
+
+        <ImageButton
+            android:id="@+id/pasteButton"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/style_textfiled"/>
+
+        <TextView
+            android:id="@+id/textinputHendle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Tap to paste link"
+            android:fontFamily="@font/poppins_reguler"
+            android:textSize="13sp"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+
+        <ProgressBar
+            android:id="@+id/loadingBar"
+            android:visibility="invisible"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"/>
+
+<!--        <ImageButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginEnd="7dp"-->
+<!--            android:layout_marginRight="7dp"-->
+<!--            android:background="@drawable/ic_dnl"/>-->
+
+    </RelativeLayout>
+
+
+
+    <!--How It Works-->
+    <LinearLayout
+        android:id="@+id/howItWork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="30dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textFieldWrapper">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/how_it_work"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="14sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/how1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_1"
+                android:textColor="@color/secondaryBlue"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="12sp"/>
+            <View
+                android:id="@+id/howDevider1"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_toRightOf="@id/how1"
+                android:layout_toEndOf="@id/how1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/howDevider1"
+                android:layout_toEndOf="@+id/howDevider1">
+
+                <TextView
+                    android:id="@+id/itemHow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open App"
+                    android:textColor="@color/secondaryBlue"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/itemHow1Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open TicToc App"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/how2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2"
+                android:textColor="@color/secondaryBlue"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="12sp"/>
+            <View
+                android:id="@+id/howDevider2"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_toRightOf="@id/how2"
+                android:layout_toEndOf="@id/how2" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/howDevider2"
+                android:layout_toEndOf="@+id/howDevider2">
+
+                <TextView
+                    android:id="@+id/itemHow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copy_link_share"
+                    android:textColor="@color/secondaryBlue"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/itemHow2Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_video_and_click_share_and_then_select_ncopy_to_clipboard"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/how3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_3"
+                android:textColor="@color/secondaryBlue"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="12sp"/>
+            <View
+                android:id="@+id/howDevider3"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_toRightOf="@id/how3"
+                android:layout_toEndOf="@id/how3" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/howDevider3"
+                android:layout_toEndOf="@+id/howDevider3">
+
+                <TextView
+                    android:id="@+id/itemHow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/paste"
+                    android:textColor="@color/secondaryBlue"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/itemHow3Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap to paste link"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/how4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4"
+                android:textColor="@color/secondaryBlue"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="12sp"/>
+            <View
+                android:id="@+id/howDevider4"
+                android:layout_width="20dp"
+                android:layout_height="0dp"
+                android:layout_toRightOf="@id/how4"
+                android:layout_toEndOf="@id/how4" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/howDevider4"
+                android:layout_toEndOf="@+id/howDevider4">
+
+                <TextView
+                    android:id="@+id/itemHow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download_ready"
+                    android:textColor="@color/secondaryBlue"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/itemHow4Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_download_video_you_want_with_watermark_or_no_watermark"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="25dp"
+            android:fontFamily="@font/poppins_reguler"
+            android:textColor="@android:color/white"
+            android:textSize="10sp"
+            android:text="@string/help_us_to_improve_this_apps_if_you_find_a_problem_or_error_please_report_a_problem"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

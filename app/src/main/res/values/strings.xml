@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TikTok Downloader</string>
+    <string name="test">Test</string>
+    <string name="logo_apps">Logo Apps</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="my_galery">My Galery</string>
+    <string name="download">Download</string>
+    <string name="settings">Settings</string>
+    <string name="select_download_video_you_want_with_watermark_or_no_watermark">Select Download video you want, with Watermark or No Watermark</string>
+    <string name="download_ready">Download Ready</string>
+    <string name="_4">4.</string>
+    <string name="paste_clipboard_from_tiktok_into_input_and_wait_for_created_ndownload_video">Paste Clipboard from TikTok into Input and wait for created \nDownload video</string>
+    <string name="paste">Paste</string>
+    <string name="_3">3.</string>
+    <string name="select_video_and_click_share_and_then_select_ncopy_to_clipboard">Select video and click Share and then select \nCopy to Clipboard</string>
+    <string name="copy_link_share">Copy Link Share</string>
+    <string name="_2">2.</string>
+    <string name="first_open_tiktok_manualy_or">First open TikTok manualy or</string>
+    <string name="open_tiktok">Open TikTok</string>
+    <string name="_1">1.</string>
+    <string name="how_it_work">How it Work?</string>
+    <string name="insert_link_video">Insert link video</string>
+    <string name="free_and_unlimited">FREE and UNLIMITED</string>
+    <string name="download_video_tiktok_without_watermark">Download Video TikTok without Watermark</string>
+    <string name="tiktok_downloader">TikTok Downloader</string>
+    <string name="the_best_apps">The Best Apps</string>
+    <string name="_1_">#1</string>
+    <string name="help_us_to_improve_this_apps_if_you_find_a_problem_or_error_please_report_a_problem">Help us to improve this apps, if you find a Problem or Error, please Report a problem</string>
+</resources>

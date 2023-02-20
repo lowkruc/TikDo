@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="5dp"
+    android:layout_marginHorizontal="10dp"
+    app:cardBackgroundColor="@color/colorPrimary"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/wrapperDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/colorPrimarySecondary"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textTopDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your video is ready to download"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/textSubtitleDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thanks for your use this apps for downloading video TikTok, don't forget to give rating for this apps"
+                    android:gravity="center_horizontal"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/poppins_reguler"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="10sp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/topDialog"
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wrapperImageCover"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_width="140dp"
+                android:layout_height="250dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/colorPrimarySecondary"
+                app:cardCornerRadius="5dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="5dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imageCover"
+                        android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_height="match_parent"/>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_toEndOf="@+id/wrapperImageCover"
+                android:layout_toRightOf="@+id/wrapperImageCover"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/colorPrimarySecondary"
+                android:layout_height="250dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="15dp"
+                    android:layout_height="250dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="notnot8"
+                        android:includeFontPadding="false"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/secondaryBlue"
+                        android:textSize="12dp"/>
+
+                    <TextView
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Nahan tawa huhu jijik sendiri🥺 #fyp #masukberanda #videoviral #explore #tiktoker"
+                        android:fontFamily="@font/poppins_reguler"
+                        android:textColor="@android:color/white"
+                        android:maxLines="2"
+                        android:textSize="10dp"/>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/buttonNoWatermark"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:src="@drawable/ic_icon_download"/>
+
+                            <LinearLayout
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:layout_toRightOf="@+id/buttonNoWatermark"
+                                android:layout_toEndOf="@+id/buttonNoWatermark"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Watermark"
+                                    android:textSize="12sp"
+                                    android:includeFontPadding="false"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textColor="@android:color/white"/>
+
+                                <TextView
+                                    android:id="@+id/sizeNoWatermark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.03 MB"
+                                    android:fontFamily="@font/poppins_reguler"
+                                    android:includeFontPadding="false"
+                                    android:textSize="10sp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/buttonWatermark"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:src="@drawable/ic_icon_download"/>
+
+                            <LinearLayout
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:layout_toRightOf="@+id/buttonWatermark"
+                                android:layout_toEndOf="@+id/buttonWatermark"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Watermark"
+                                    android:textSize="12sp"
+                                    android:includeFontPadding="false"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textColor="@android:color/white"/>
+
+                                <TextView
+                                    android:id="@+id/sizeWatermark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.03 MB"
+                                    android:fontFamily="@font/poppins_reguler"
+                                    android:includeFontPadding="false"
+                                    android:textSize="10sp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/buttonMusic"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="?attr/selectableItemBackground"
+                                android:src="@drawable/ic_icon_download"/>
+
+                            <LinearLayout
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:layout_toRightOf="@+id/buttonMusic"
+                                android:layout_toEndOf="@+id/buttonMusic"
+                                android:orientation="vertical"
+                                android:layout_centerVertical="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Original Music"
+                                    android:textSize="12sp"
+                                    android:includeFontPadding="false"
+                                    android:fontFamily="@font/poppins_bold"
+                                    android:textColor="@android:color/white"/>
+
+                                <TextView
+                                    android:id="@+id/sizeMusic"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="1.03 MB"
+                                    android:fontFamily="@font/poppins_reguler"
+                                    android:includeFontPadding="false"
+                                    android:textSize="10sp"
+                                    android:textColor="@android:color/darker_gray"/>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
